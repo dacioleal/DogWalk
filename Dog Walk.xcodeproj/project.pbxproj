@@ -89,9 +89,9 @@
 				FE9B988C196F812900661F7D /* ViewController.swift */,
 				F31EC18A1B603F1C0043E31B /* CoreDataStack.swift */,
 				FE9B988E196F812900661F7D /* Main.storyboard */,
+				F34D26141B6162E2002BB265 /* DogWalk.xcdatamodeld */,
 				FE9B9891196F812900661F7D /* Images.xcassets */,
 				FE9B9888196F812900661F7D /* Supporting Files */,
-				F34D26141B6162E2002BB265 /* DogWalk.xcdatamodeld */,
 			);
 			path = "Dog Walk";
 			sourceTree = "<group>";

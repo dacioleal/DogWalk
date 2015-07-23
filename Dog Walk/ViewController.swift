@@ -12,7 +12,7 @@ import CoreData
 class ViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView!
-    var walks:Array<NSDate> = []
+    var currentDog : Dog!
     var managedContext : NSManagedObjectContext!
     
     override func viewDidLoad() {
@@ -21,12 +21,47 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         tableView.registerClass(UITableViewCell.self,
             forCellReuseIdentifier: "Cell")
+        
+        //Insert Dog entity
+        let dogEntity = NSEntityDescription.entityForName("Dog", inManagedObjectContext: managedContext)
+        
+        let dog = Dog(entity: dogEntity!, insertIntoManagedObjectContext: managedContext)
+        
+        let dogName = "Fido"
+        let dogFetch = NSFetchRequest(entityName: "Dog")
+        dogFetch.predicate = NSPredicate(format: "name == %@", dogName)
+        
+        var error : NSError?
+        
+        let result = managedContext.executeFetchRequest(dogFetch, error: &error)
+        
+        if let dogs = result {
+            
+            if dogs.count == 0 {
+                
+                currentDog = Dog(entity: dogEntity!, insertIntoManagedObjectContext: managedContext)
+                currentDog.name = dogName
+                
+                if !managedContext.save(&error) {
+                    println("Could not save: \(error), \(error!.userInfo)")
+                }
+                
+            }
+        } else {
+            println("Could not fetch")
+        }
     }
     
     func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int {
             
-            return walks.count;
+            var numRows = 0
+            
+            if let dog = currentDog as Dog? {
+                numRows = dog.walks.count
+            }
+            
+            return numRows
     }
     
     func tableView(tableView: UITableView,
@@ -46,14 +81,14 @@ class ViewController: UIViewController, UITableViewDataSource {
             dateFormatter.dateStyle = .ShortStyle
             dateFormatter.timeStyle = .MediumStyle
             
-            let date =  walks[indexPath.row]
-            cell.textLabel!.text = dateFormatter.stringFromDate(date)
+            let walk =  currentDog.walks[indexPath.row] as? Walk
+            cell.textLabel!.text = dateFormatter.stringFromDate(walk!.date)
             
             return cell
     }
     
     @IBAction func add(sender: AnyObject) {
-        walks.append(NSDate())
+        //walks.append(NSDate())
         tableView.reloadData()
     }
     
