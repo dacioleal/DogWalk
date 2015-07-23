@@ -36,7 +36,7 @@ class CoreDataStack {
         let urls = fileManager.URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask) as! [NSURL]
         
         let documentsURL = urls[0]
-        let storeURL = documentsURL.URLByAppendingPathComponent("DogWalk")
+        let storeURL = documentsURL.URLByAppendingPathComponent("Dog Walk")
         let options = [NSMigratePersistentStoresAutomaticallyOption:true]
         
         var error : NSError?
@@ -47,6 +47,13 @@ class CoreDataStack {
             println("Error adding persistent store: \(error)")
             abort()
         }
+    }
+    
+    func saveContext() {
         
+        var error : NSError?
+        if context.hasChanges && !context.save(&error) {
+            println("Could not save: \(error), \(error?.userInfo)")
+        }
     }
 }

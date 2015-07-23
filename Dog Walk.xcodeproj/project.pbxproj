@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F31EC18B1B603F1C0043E31B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EC18A1B603F1C0043E31B /* CoreDataStack.swift */; };
+		F34D26161B6162E2002BB265 /* DogWalk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F34D26141B6162E2002BB265 /* DogWalk.xcdatamodeld */; };
+		F34D26181B616358002BB265 /* Walk.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D26171B616358002BB265 /* Walk.swift */; };
+		F34D261A1B616358002BB265 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D26191B616358002BB265 /* Dog.swift */; };
 		FE9B988B196F812900661F7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9B988A196F812900661F7D /* AppDelegate.swift */; };
 		FE9B988D196F812900661F7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9B988C196F812900661F7D /* ViewController.swift */; };
 		FE9B9890196F812900661F7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9B988E196F812900661F7D /* Main.storyboard */; };
@@ -27,6 +30,9 @@
 
 /* Begin PBXFileReference section */
 		F31EC18A1B603F1C0043E31B /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		F34D26151B6162E2002BB265 /* DogWalk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DogWalk.xcdatamodel; sourceTree = "<group>"; };
+		F34D26171B616358002BB265 /* Walk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Walk.swift; sourceTree = "<group>"; };
+		F34D26191B616358002BB265 /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		FE9B9885196F812900661F7D /* Dog Walk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog Walk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9B9889196F812900661F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE9B988A196F812900661F7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,12 +83,15 @@
 		FE9B9887196F812900661F7D /* Dog Walk */ = {
 			isa = PBXGroup;
 			children = (
+				F34D26191B616358002BB265 /* Dog.swift */,
+				F34D26171B616358002BB265 /* Walk.swift */,
 				FE9B988A196F812900661F7D /* AppDelegate.swift */,
 				FE9B988C196F812900661F7D /* ViewController.swift */,
 				F31EC18A1B603F1C0043E31B /* CoreDataStack.swift */,
 				FE9B988E196F812900661F7D /* Main.storyboard */,
 				FE9B9891196F812900661F7D /* Images.xcassets */,
 				FE9B9888196F812900661F7D /* Supporting Files */,
+				F34D26141B6162E2002BB265 /* DogWalk.xcdatamodeld */,
 			);
 			path = "Dog Walk";
 			sourceTree = "<group>";
@@ -212,6 +221,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F31EC18B1B603F1C0043E31B /* CoreDataStack.swift in Sources */,
+				F34D26161B6162E2002BB265 /* DogWalk.xcdatamodeld in Sources */,
+				F34D261A1B616358002BB265 /* Dog.swift in Sources */,
+				F34D26181B616358002BB265 /* Walk.swift in Sources */,
 				FE9B988D196F812900661F7D /* ViewController.swift in Sources */,
 				FE9B988B196F812900661F7D /* AppDelegate.swift in Sources */,
 			);
@@ -413,6 +425,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F34D26141B6162E2002BB265 /* DogWalk.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F34D26151B6162E2002BB265 /* DogWalk.xcdatamodel */,
+			);
+			currentVersion = F34D26151B6162E2002BB265 /* DogWalk.xcdatamodel */;
+			path = DogWalk.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FE9B987D196F812900661F7D /* Project object */;
 }
