@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="278" width="320" height="202"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="9Af-yg-QtJ"/>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="fLQ-wy-kBl"/>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="Ui4-Wq-vmE"/>
                                 </connections>
                             </tableView>

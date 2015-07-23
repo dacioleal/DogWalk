@@ -22,6 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         tableView.registerClass(UITableViewCell.self,
             forCellReuseIdentifier: "Cell")
         
+        
         //Insert Dog entity
         let dogEntity = NSEntityDescription.entityForName("Dog", inManagedObjectContext: managedContext)
         
@@ -46,6 +47,8 @@ class ViewController: UIViewController, UITableViewDataSource {
                     println("Could not save: \(error), \(error!.userInfo)")
                 }
                 
+            } else {
+                currentDog = dogs[0] as! Dog
             }
         } else {
             println("Could not fetch")

@@ -36,7 +36,7 @@ class CoreDataStack {
         let urls = fileManager.URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask) as! [NSURL]
         
         let documentsURL = urls[0]
-        let storeURL = documentsURL.URLByAppendingPathComponent("Dog Walk")
+        let storeURL = documentsURL.URLByAppendingPathComponent("Dog Walk.sqlite")
         let options = [NSMigratePersistentStoresAutomaticallyOption:true]
         
         var error : NSError?
