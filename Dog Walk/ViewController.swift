@@ -88,7 +88,23 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     @IBAction func add(sender: AnyObject) {
-        //walks.append(NSDate())
+        
+        let walkEntity = NSEntityDescription.entityForName("Walk", inManagedObjectContext: managedContext)
+        let walk = Walk(entity: walkEntity!, insertIntoManagedObjectContext: managedContext)
+        
+        walk.date = NSDate()
+        
+        var walks = currentDog.walks.mutableCopy() as! NSMutableOrderedSet
+        walks.addObject(walk)
+        
+        currentDog.walks = walks.copy() as! NSOrderedSet
+        
+        var error : NSError?
+        
+        if !managedContext.save(&error) {
+            println("Could not save: \(error), \(error!.userInfo)")
+        }
+        
         tableView.reloadData()
     }
     
