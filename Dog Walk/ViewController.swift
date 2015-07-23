@@ -90,6 +90,32 @@ class ViewController: UIViewController, UITableViewDataSource {
             return cell
     }
     
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            
+            let walkToRemove = currentDog.walks[indexPath.row] as! Walk
+            let walks = currentDog.walks.mutableCopy() as! NSMutableOrderedSet
+            walks.removeObjectAtIndex(indexPath.row)
+            currentDog.walks = walks.copy() as! NSOrderedSet
+            
+            managedContext.deleteObject(walkToRemove)
+            
+            var error : NSError?
+            if !managedContext.save(&error) {
+                println("Could not save: \(error), \(error!.userInfo)")
+            }
+            
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+    
+    
+    
     @IBAction func add(sender: AnyObject) {
         
         let walkEntity = NSEntityDescription.entityForName("Walk", inManagedObjectContext: managedContext)
