@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F31EC18B1B603F1C0043E31B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EC18A1B603F1C0043E31B /* CoreDataStack.swift */; };
 		FE9B988B196F812900661F7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9B988A196F812900661F7D /* AppDelegate.swift */; };
 		FE9B988D196F812900661F7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9B988C196F812900661F7D /* ViewController.swift */; };
 		FE9B9890196F812900661F7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9B988E196F812900661F7D /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F31EC18A1B603F1C0043E31B /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		FE9B9885196F812900661F7D /* Dog Walk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog Walk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9B9889196F812900661F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE9B988A196F812900661F7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				FE9B988A196F812900661F7D /* AppDelegate.swift */,
 				FE9B988C196F812900661F7D /* ViewController.swift */,
+				F31EC18A1B603F1C0043E31B /* CoreDataStack.swift */,
 				FE9B988E196F812900661F7D /* Main.storyboard */,
 				FE9B9891196F812900661F7D /* Images.xcassets */,
 				FE9B9888196F812900661F7D /* Supporting Files */,
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F31EC18B1B603F1C0043E31B /* CoreDataStack.swift in Sources */,
 				FE9B988D196F812900661F7D /* ViewController.swift in Sources */,
 				FE9B988B196F812900661F7D /* AppDelegate.swift in Sources */,
 			);
@@ -397,6 +401,7 @@
 				FE9B98A3196F812900661F7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE9B98A4196F812900661F7D /* Build configuration list for PBXNativeTarget "Dog WalkTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +410,7 @@
 				FE9B98A6196F812900661F7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
